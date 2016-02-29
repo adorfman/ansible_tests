@@ -1,0 +1,13 @@
+---
+
+mode: http
+
+listenport: 8888
+backend_port: 80
+
+appname: myapp
+
+balance: roundrobin 
+
+iface: 'eth1'
+#iface: '{{ ansible_default_ipv4.interface }}'

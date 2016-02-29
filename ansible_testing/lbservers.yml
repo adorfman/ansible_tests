@@ -1,0 +1,8 @@
+---
+# gather data from webserver hosts
+- hosts: webservers
+- hosts: lb 
+  sudo: yes
+  roles:
+    - common
+    - lb
