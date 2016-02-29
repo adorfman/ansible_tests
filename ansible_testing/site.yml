@@ -3,3 +3,4 @@
 - include: mgmtservers.yml
 - include: webservers.yml
 - include: dbservers.yml
+- include: lbservers.yml
