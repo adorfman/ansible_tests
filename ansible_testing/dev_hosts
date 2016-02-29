@@ -1,0 +1,8 @@
+[mgmt]
+core
+
+[webservers]
+web1
+
+[dbservers]
+db1

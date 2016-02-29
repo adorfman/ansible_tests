@@ -1,0 +1,22 @@
+---
+# file: roles/common/tasks/main.yml
+
+- name: be sure vim is installed
+  yum: name=vim state=installed
+
+- name: be sure ntp is installed
+  yum: name=ntp state=installed
+  tags: ntp
+
+
+- name: add users
+  user: name={{ item.name }} state=present shell=/bin/bash password={{ item.pass }} uid={{ item.uid }}   
+  with_items: 
+    - "{{ system_users }}"
+
+#- name: Install ufw
+#  yum: name=ufw state=installed
+#- name: Allow ssh through firewall
+#  ufw: proto=tcp port=22 rule=allow
+#- name: Set ufw policy
+#  ufw: state=enabled direction=incoming policy=allow
