@@ -1,0 +1,9 @@
+The ansible_local provisioner is currently buggy 
+and possibly broken so you might have to manually
+run ansible after running vagrant up
+ 
+vagrant up
+
+varnish ssh core
+ 
+cd /vagrant/ansible_testing && ansible-playbook --limit='all' --inventory-file=inventory site.yml
